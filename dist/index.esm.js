@@ -2187,7 +2187,7 @@ var socials = [
                 href: "http://t.me/ybearfinance_India",
             },
 			{
-                label: "Channel",
+                label: "Announcements",
                 href: "https://t.me/ybearchannel",
             },
 			
