@@ -1857,8 +1857,8 @@ var Icon$P = function (props) {
 
 var Logo = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 205 26" }, props),
-        React.createElement("image", { width: "205", height: "26", href: isDark ? '/images/bear/logo_banner.png' : '/images/bear/logo_banner.png' })));
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 177 54" }, props),
+        React.createElement("image", { width: "177", href: isDark ? '/images/bear/logo_banner.png' : '/images/bear/logo_banner.png' })));
 };
 
 var Icon$Q = function (props) {
@@ -2340,9 +2340,9 @@ var PanelFooter = function (_a) {
 			React.createElement(SocialEntry, null,
             cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React.createElement(Icon$v, { width: "24px", mr: "8px" }),
-                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
-				React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { variant: "text", startIcon: React.createElement(LanguageIcon, { color: "textSubtle", width: "24px" }) },
-                    React.createElement(Text, { color: "textSubtle" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
+                React.createElement(Text, { color: "iconcolor", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
+				React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { variant: "text", startIcon: React.createElement(LanguageIcon, { color: "iconcolor", width: "24px" }) },
+                    React.createElement(Text, { color: "iconcolor" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
                 // Safari fix
                 style: { minHeight: "32px", height: "auto" } }, lang.language)); }))
 				
@@ -2351,7 +2351,7 @@ var PanelFooter = function (_a) {
         React.createElement(SettingsEntry, null,
 			 React.createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
-                var iconProps = { width: "20px", color: "textSubtle", style: { cursor: "pointer", marginLeft:"13px" } };
+                var iconProps = { width: "20px", color: "iconcolor", style: { cursor: "pointer", marginLeft:"13px" } };
                 var mr = index < socials.length - 1 ? "20px" : 0;
                 if (social.items) {
                     return (React.createElement(Dropdown, { key: social.label, position: "top", target: React.createElement(Icon, __assign({}, iconProps, { mr: mr })) }, social.items.map(function (item) { return (React.createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
@@ -2592,6 +2592,13 @@ var UserBlock = function (_a) {
         } }, "Connect"))));
 };
 
+var BuySbear = function (_a) {
+   
+    return (React.createElement(Button, { size: "sm",marginRight:"10px", onClick: function () {
+             window.location.href = "https://v2exchange.ybearswap.finance/#/swap?outputCurrency=0xdEC858d5ee93568CE4eA5bbf9169ceA23d2dE305";
+        } }, "Buy SBEAR"));
+};
+
 var Icon$19 = function (props) {
     var theme = useTheme();
     var primaryColor = theme.isDark ? "#3C3742" : "#e9eaeb";
@@ -2695,6 +2702,7 @@ var Menu = function (_a) {
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null,
+				React.createElement(BuySbear, { account: account, login: login, logout: logout }),
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React.createElement(Avatar, { profile: profile }))),
         React.createElement(BodyWrapper, null,
@@ -2792,9 +2800,9 @@ var templateObject_1$K;
 
 var baseColors = {
     failure: "#ED4B9E",
-    primary: "#ffb342",
-    primaryBright: "#ffb342",
-    primaryDark: "#ffb342",
+    primary: "#FF6518",
+    primaryBright: "#FF6518",
+    primaryDark: "#FF6518",
     secondary: "#0e0c0c",
     success: "#31D0AA",
     warning: "#FFB237",
@@ -2808,11 +2816,11 @@ var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { ba
     } });
 	*/
 	
-var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#9A6AFF", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#353547", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "#27262c", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#FFFFFF", background: "#112436", backgroundDisabled: "#1F2C3C", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#3B475B", text: "#FFFFFF", textDisabled: "#72808E", textSubtle: "#FFFFFF", iconcolor: "#A4C5E1", borderColor: "#524B63", card: "#081D2D", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });	
 	
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#9A6AFF", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#353547", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "#27262c", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#FFFFFF", background: "#112436", backgroundDisabled: "#1F2C3C", contrast: "#009eff", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#0098A1", tertiary: "#3B475B", text: "#FFFFFF", textDisabled: "#72808E" , textSubtle: "#FFFFFF", iconcolor: "#A4C5E1", borderColor: "#524B63", card: "#081D2D", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });
 
