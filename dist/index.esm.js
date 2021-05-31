@@ -2595,7 +2595,7 @@ var UserBlock = function (_a) {
 var BuySbear = function (_a) {
    
     return (React.createElement(Button, { size: "sm",marginRight:"10px", onClick: function () {
-             window.location.href = "https://v2exchange.ybearswap.finance/#/swap?outputCurrency=0xdEC858d5ee93568CE4eA5bbf9169ceA23d2dE305";
+             window.location.href = "https://exchange.ybearswap.finance/#/swap?outputCurrency=0xdEC858d5ee93568CE4eA5bbf9169ceA23d2dE305";
         } }, "Buy SBEAR"));
 };
 
